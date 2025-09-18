@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portofolio - Arya Dewa Pamungkas</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f9;
+      color: #333;
+      animation: fadeIn 1.2s ease-in;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+    header {
+      background: linear-gradient(135deg, #222, #00adb5);
+      color: #fff;
+      padding: 40px 20px;
+      text-align: center;
+      animation: slideDown 1s ease;
+    }
+    @keyframes slideDown {
+      from {transform: translateY(-50px); opacity: 0;}
+      to {transform: translateY(0); opacity: 1;}
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+    header p {
+      margin: 5px 0 0;
+    }
+    .typing {
+      display: inline-block;
+      border-right: 2px solid #fff;
+      white-space: nowrap;
+      overflow: hidden;
+      animation: typing 4s steps(30, end), blink 0.8s infinite;
+    }
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+    @keyframes blink {
+      from, to { border-color: transparent; }
+      50% { border-color: #fff; }
+    }
+    nav {
+      background: #444;
+      padding: 10px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #00adb5;
+    }
+    section {
+      max-width: 1000px;
+      margin: auto;
+      padding: 40px 20px;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease;
+    }
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    section.animate-left.visible {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    section.animate-left {
+      transform: translateX(-50px);
+    }
+    section.animate-right.visible {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    section.animate-right {
+      transform: translateX(50px);
+    }
+    section.animate-zoom.visible {
+      transform: scale(1);
+      opacity: 1;
+    }
+    section.animate-zoom {
+      transform: scale(0.9);
+    }
+    section h2 {
+      color: #00adb5;
+      border-bottom: 2px solid #00adb5;
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+    .skills, .experience, .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
+    .card h3 {
+      margin-top: 0;
+      color: #333;
+    }
+    footer {
+      background: #222;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      animation: fadeIn 1.5s ease;
+    }
+    footer a {
+      color: #00adb5;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 class="typing">Arya Dewa Pamungkas</h1>
+    <p>Web Developer & Game Developer</p>
+  </header>
+
+  <nav>
+    <a href="#about">Tentang</a>
+    <a href="#skills">Skill</a>
+    <a href="#experience">Pengalaman</a>
+    <a href="#projects">Proyek</a>
+    <a href="#contact">Kontak</a>
+  </nav>
+
+  <section id="about" class="animate-left">
+    <h2>Tentang Saya</h2>
+    <p>Saya adalah seorang <strong>Web Developer & Game Developer</strong> dengan pengalaman dalam membangun website modern, interaktif, serta mengembangkan game dengan performa optimal. Terbiasa bekerja dengan berbagai bahasa pemrograman dan framework, serta mampu beradaptasi dengan kebutuhan proyek.</p>
+  </section>
+
+  <section id="skills" class="animate-right">
+    <h2>Skill Utama</h2>
+    <div class="skills">
+      <div class="card">
+        <h3>Web Development</h3>
+        <p>HTML, CSS, JavaScript (Frontend)</p>
+        <p>Responsive Design & UI/UX</p>
+      </div>
+      <div class="card">
+        <h3>Game Development</h3>
+        <p>C++ untuk mekanik & performa game</p>
+        <p>Engine: Roblox Studio, Unity/Unreal (basic)</p>
+      </div>
+      <div class="card">
+        <h3>Backend & General Programming</h3>
+        <p>Python (otomatisasi, backend dasar, data processing)</p>
+        <p>API integration & database handling</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience" class="animate-zoom">
+    <h2>Pengalaman Kerja</h2>
+    <div class="experience">
+      <div class="card">
+        <h3>Website Developer (Freelance)</h3>
+        <p>Membuat dan mengelola website untuk bisnis kecil & personal brand.</p>
+        <p>Menerapkan desain modern dengan HTML, CSS, dan JavaScript.</p>
+        <p>Optimasi performa website agar cepat diakses.</p>
+      </div>
+      <div class="card">
+        <h3>Game Developer (Project/Tim Indie)</h3>
+        <p>Mengembangkan game sederhana menggunakan C++ dan engine.</p>
+        <p>Membuat mekanisme gameplay interaktif.</p>
+        <p>Mengoptimalkan performa dan pengalaman pengguna.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="animate-left">
+    <h2>Proyek Pilihan</h2>
+    <div class="projects">
+      <div class="card">
+        <h3>Dashboard X-TJAT1</h3>
+        <p>Dashboard modern dengan sidebar interaktif untuk manajemen data.</p>
+      </div>
+      <div class="card">
+        <h3>Roblox Game Lobby System</h3>
+        <p>Lobby dengan 3D avatar, sistem tombol (Start, Store, Team, dsb.).</p>
+      </div>
+      <div class="card">
+        <h3>Game Indie Mini RPG</h3>
+        <p>Mekanik dasar RPG dibuat dengan C++ & Python.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="animate-right">
+    <h2>Kontak</h2>
+    <p>Email: <a href="mailto:aryadewapamungkas@gmail.com">ariadewapamungkas@gmail.com</a></p>
+    <p>GitHub: <a href="https://github.com/AryaWasHere" target="_blank">github.com/AryaWasHere</a></p>
+  </section>
+
+  <footer>
+    <p>© 2025 Arya Dewa Pamungkas | Make With ❤</p>
+  </footer>
+
+  <script>
+    const sections = document.querySelectorAll('section');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+  </script>
+</body>
+</html>
